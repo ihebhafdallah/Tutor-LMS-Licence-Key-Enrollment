@@ -150,4 +150,22 @@ class Tutor_Licence_Key_Manager
             )
         );
     }
+
+    public static function get_keys_for_export($status = '')
+    {
+        global $wpdb;
+        $table = $wpdb->prefix . 'tutor_licence_keys';
+
+        $sql = "SELECT * FROM {$table}";
+        $params = [];
+
+        if ($status !== '') {
+            $sql .= " WHERE status = %s";
+            $params[] = $status;
+        }
+
+        return $params
+            ? $wpdb->get_results($wpdb->prepare($sql, $params), ARRAY_A)
+            : $wpdb->get_results($sql, ARRAY_A);
+    }
 }

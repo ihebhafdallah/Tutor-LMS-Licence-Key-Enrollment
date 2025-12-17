@@ -1,7 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tutor-lms-licence-"
+"key-enrollment\n"
+"POT-Creation-Date: 2025-12-17T21:12:07+01:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,15 +21,16 @@ msgstr "تسجيل Tutor LMS بواسطة مفتاح الترخيص"
 #. Description of the plugin
 #: tutor-lms-licence-key-enrollment.php
 msgid ""
-"Tutor LMS Licence Key Enrollment lets users enroll in courses using a licence "
-"key. Admins generate course licence keys and share them with users, who can "
-"submit their key via a frontend form using the shortcode "
+"Tutor LMS Licence Key Enrollment lets users enroll in courses using a "
+"licence key. Admins generate course licence keys and share them with users, "
+"who can submit their key via a frontend form using the shortcode "
 "<code>[tutor_licence_key]</code> to get enrolled instantly."
 msgstr ""
 "يسمح إضافة 'تسجيل Tutor LMS بواسطة مفتاح الترخيص' للمستخدمين بالتسجيل في "
 "الدورات باستخدام مفتاح ترخيص. يقوم المشرفون بتوليد مفاتيح ترخيص للدورات "
-"ومشاركتها مع المستخدمين، الذين يمكنهم إدخال مفتاحهم عبر نموذج في واجهة الموقع "
-"باستخدام الكود المختصر <code>[tutor_licence_key]</code> ليتم تسجيلهم فوراً."
+"ومشاركتها مع المستخدمين، الذين يمكنهم إدخال مفتاحهم عبر نموذج في واجهة "
+"الموقع باستخدام الكود المختصر <code>[tutor_licence_key]</code> ليتم تسجيلهم "
+"فوراً."
 
 #. Author of the plugin
 #: tutor-lms-licence-key-enrollment.php
@@ -39,123 +42,149 @@ msgstr "إيهاب حفظ الله"
 msgid "https://ihebhafdallah.com/"
 msgstr "https://ihebhafdallah.com/"
 
-#: includes/class-admin.php:16 includes/class-admin.php:17
-#: includes/class-admin.php:60
+#: includes/class-admin.php:17 includes/class-admin.php:18
+#: includes/class-admin.php:61
 msgid "Licence Keys"
 msgstr "مفاتيح الترخيص"
 
-#: includes/class-admin.php:30
+#: includes/class-admin.php:31
 msgid "Generate Licence Keys"
 msgstr "توليد مفاتيح الترخيص"
 
-#: includes/class-admin.php:38 includes/class-licence-key-table.php:11
+#: includes/class-admin.php:39 includes/class-admin.php:131
+#: includes/class-licence-key-table.php:11
 msgid "Course"
 msgstr "الدورة"
 
-#: includes/class-admin.php:42
+#: includes/class-admin.php:43
 msgid "Number of Keys"
 msgstr "عدد المفاتيح"
 
-#: includes/class-admin.php:45
+#: includes/class-admin.php:46
 msgid "5"
 msgstr "5"
 
-#: includes/class-admin.php:46
+#: includes/class-admin.php:47
 msgid "10"
 msgstr "10"
 
-#: includes/class-admin.php:47
+#: includes/class-admin.php:48
 msgid "25"
 msgstr "25"
 
-#: includes/class-admin.php:48
+#: includes/class-admin.php:49
 msgid "50"
 msgstr "50"
 
-#: includes/class-admin.php:49
+#: includes/class-admin.php:50
 msgid "100"
 msgstr "100"
 
-#: includes/class-admin.php:55
+#: includes/class-admin.php:56
 msgid "Generate Keys"
 msgstr "توليد المفاتيح"
 
-#: includes/class-licence-key-shortcode.php:13
-msgid "Please login to use a licence key."
-msgstr "يرجى تسجيل الدخول لاستخدام مفتاح الترخيص."
+#: includes/class-admin.php:110
+msgid "Permission denied"
+msgstr "تم رفض الإذن"
 
-#: includes/class-licence-key-shortcode.php:25
-msgid "XXXX-XXXX-XXXX-XXXX"
-msgstr "XXXX-XXXX-XXXX-XXXX"
+#. translators: %s: date
+#: includes/class-admin.php:120
+#, php-format
+msgid "licence-keys-%s.csv"
+msgstr "licence-keys-%s.csv"
 
-#: includes/class-licence-key-shortcode.php:30
-msgid "Activate Licence"
-msgstr "تفعيل الترخيص"
+#: includes/class-admin.php:130
+msgid "ID"
+msgstr "المعرف"
 
-#: includes/class-licence-key-shortcode.php:72
-msgid "Invalid or expired licence key."
-msgstr "مفتاح الترخيص غير صالح أو منتهي الصلاحية."
-
-#: includes/class-licence-key-shortcode.php:80
-msgid "Course product not found."
-msgstr "لم يتم العثور على منتج الدورة."
-
-#: includes/class-licence-key-shortcode.php:95
-msgid "Licence key enrollment"
-msgstr "التسجيل بواسطة مفتاح الترخيص"
-
-#: includes/class-licence-key-shortcode.php:110
-msgid "Course activated successfully!"
-msgstr "تم تفعيل الدورة بنجاح!"
-
-#: includes/class-licence-key-table.php:12
+#: includes/class-admin.php:132 includes/class-licence-key-table.php:12
 msgid "Licence Key"
 msgstr "مفتاح الترخيص"
 
-#: includes/class-licence-key-table.php:13
+#: includes/class-admin.php:133 includes/class-licence-key-table.php:13
 msgid "Status"
 msgstr "الحالة"
 
-#: includes/class-licence-key-table.php:14
+#: includes/class-admin.php:134 includes/class-licence-key-table.php:14
 msgid "Created"
 msgstr "تاريخ الإنشاء"
+
+#: includes/class-licence-key-shortcode.php:16
+msgid "Please login to use a licence key."
+msgstr "يرجى تسجيل الدخول لاستخدام مفتاح الترخيص."
+
+#: includes/class-licence-key-shortcode.php:29
+msgid "XXXX-XXXX-XXXX-XXXX"
+msgstr "XXXX-XXXX-XXXX-XXXX"
+
+#: includes/class-licence-key-shortcode.php:33
+msgid "Activate Licence"
+msgstr "تفعيل الترخيص"
+
+#: includes/class-licence-key-shortcode.php:76
+msgid "Invalid or expired licence key."
+msgstr "مفتاح الترخيص غير صالح أو منتهي الصلاحية."
+
+#: includes/class-licence-key-shortcode.php:84
+msgid "Course product not found."
+msgstr "لم يتم العثور على منتج الدورة."
+
+#: includes/class-licence-key-shortcode.php:99
+msgid "Licence key enrollment"
+msgstr "التسجيل بواسطة مفتاح الترخيص"
+
+#: includes/class-licence-key-shortcode.php:114
+msgid "Course activated successfully!"
+msgstr "تم تفعيل الدورة بنجاح!"
 
 #: includes/class-licence-key-table.php:46
 msgid "Deleted course"
 msgstr "دورة محذوفة"
 
-#: includes/class-licence-key-table.php:70
+#: includes/class-licence-key-table.php:69
 msgid "All Courses"
 msgstr "جميع الدورات"
 
-#: includes/class-licence-key-table.php:89
+#: includes/class-licence-key-table.php:88
 msgid "All Statuses"
 msgstr "جميع الحالات"
 
-#: includes/class-licence-key-table.php:91
+#: includes/class-licence-key-table.php:102
+msgid "Export: All Keys"
+msgstr "تصدير: جميع المفاتيح"
+
+#: includes/class-licence-key-table.php:105
 msgid "Active"
 msgstr "نشط"
 
-#: includes/class-licence-key-table.php:94
-msgid "Sent to User"
-msgstr "مرسل إلى المستخدم"
+#: includes/class-licence-key-table.php:108
+msgid "Sent"
+msgstr "إرسال"
 
-#: includes/class-licence-key-table.php:97
+#: includes/class-licence-key-table.php:111
 msgid "Expired"
 msgstr "منتهي الصلاحية"
 
-#: includes/class-licence-key-table.php:125
+#: includes/class-licence-key-table.php:119
+msgid "Export CSV"
+msgstr "تصدير ملف CSV"
+
+#: includes/class-licence-key-table.php:151
 msgid "Mark as Active"
 msgstr "تعيين كنشط"
 
-#: includes/class-licence-key-table.php:126
+#: includes/class-licence-key-table.php:152
 msgid "Mark as Sent"
 msgstr "تعيين كمرسل"
 
-#: includes/class-licence-key-table.php:127
+#: includes/class-licence-key-table.php:153
 msgid "Mark as Expired"
 msgstr "تعيين كمنتهي"
 
-#: includes/class-licence-key-table.php:128
+#: includes/class-licence-key-table.php:154
 msgid "Delete"
 msgstr "حذف"
+
+#~ msgid "Sent to User"
+#~ msgstr "مرسل إلى المستخدم"

@@ -3,11 +3,11 @@
 /**
  *
  * @link              https://ihebhafdallah.com
- * @since             1.0.0
+ * @since             1.1.0
  *
  * Plugin Name:       Tutor LMS Licence Key Enrollment
  * Description:       Tutor LMS Licence Key Enrollment lets users enroll in courses using a licence key. Admins generate course licence keys and share them with users, who can submit their key via a frontend form using the shortcode <code>[tutor_licence_key]</code> to get enrolled instantly.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Iheb HAFDALLAH
  * Author URI:        https://ihebhafdallah.com/
  * Text Domain:       tutor-lms-licence-key-enrollment

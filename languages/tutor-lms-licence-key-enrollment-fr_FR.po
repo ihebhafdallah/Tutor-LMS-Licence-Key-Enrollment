@@ -1,7 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tutor-lms-licence-"
+"key-enrollment\n"
+"POT-Creation-Date: 2025-12-17T21:12:07+01:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,10 +28,10 @@ msgid ""
 msgstr ""
 "L'extension 'Inscription par clé de licence Tutor LMS' permet aux "
 "utilisateurs de s'inscrire aux cours à l'aide d'une clé de licence. Les "
-"administrateurs génèrent des clés de licence pour les cours et les "
-"partagent avec les utilisateurs, qui peuvent soumettre leur clé via un "
-"formulaire frontal en utilisant le shortcode <code>[tutor_licence_key]</"
-"code> pour être inscrits instantanément."
+"administrateurs génèrent des clés de licence pour les cours et les partagent "
+"avec les utilisateurs, qui peuvent soumettre leur clé via un formulaire "
+"frontal en utilisant le shortcode <code>[tutor_licence_key]</code> pour être "
+"inscrits instantanément."
 
 #. Author of the plugin
 #: tutor-lms-licence-key-enrollment.php
@@ -41,123 +43,149 @@ msgstr "Iheb HAFDALLAH"
 msgid "https://ihebhafdallah.com/"
 msgstr "https://ihebhafdallah.com/"
 
-#: includes/class-admin.php:16 includes/class-admin.php:17
-#: includes/class-admin.php:60
+#: includes/class-admin.php:17 includes/class-admin.php:18
+#: includes/class-admin.php:61
 msgid "Licence Keys"
 msgstr "Clés de licence"
 
-#: includes/class-admin.php:30
+#: includes/class-admin.php:31
 msgid "Generate Licence Keys"
 msgstr "Générer des clés de licence"
 
-#: includes/class-admin.php:38 includes/class-licence-key-table.php:11
+#: includes/class-admin.php:39 includes/class-admin.php:131
+#: includes/class-licence-key-table.php:11
 msgid "Course"
 msgstr "Cours"
 
-#: includes/class-admin.php:42
+#: includes/class-admin.php:43
 msgid "Number of Keys"
 msgstr "Nombre de clés"
 
-#: includes/class-admin.php:45
+#: includes/class-admin.php:46
 msgid "5"
 msgstr "5"
 
-#: includes/class-admin.php:46
+#: includes/class-admin.php:47
 msgid "10"
 msgstr "10"
 
-#: includes/class-admin.php:47
+#: includes/class-admin.php:48
 msgid "25"
 msgstr "25"
 
-#: includes/class-admin.php:48
+#: includes/class-admin.php:49
 msgid "50"
 msgstr "50"
 
-#: includes/class-admin.php:49
+#: includes/class-admin.php:50
 msgid "100"
 msgstr "100"
 
-#: includes/class-admin.php:55
+#: includes/class-admin.php:56
 msgid "Generate Keys"
 msgstr "Générer les clés"
 
-#: includes/class-licence-key-shortcode.php:13
-msgid "Please login to use a licence key."
-msgstr "Veuillez vous connecter pour utiliser une clé de licence."
+#: includes/class-admin.php:110
+msgid "Permission denied"
+msgstr "Permission refusée"
 
-#: includes/class-licence-key-shortcode.php:25
-msgid "XXXX-XXXX-XXXX-XXXX"
-msgstr "XXXX-XXXX-XXXX-XXXX"
+#. translators: %s: date
+#: includes/class-admin.php:120
+#, php-format
+msgid "licence-keys-%s.csv"
+msgstr "clés-de-licence-%s.csv"
 
-#: includes/class-licence-key-shortcode.php:30
-msgid "Activate Licence"
-msgstr "Activer la licence"
+#: includes/class-admin.php:130
+msgid "ID"
+msgstr "ID"
 
-#: includes/class-licence-key-shortcode.php:72
-msgid "Invalid or expired licence key."
-msgstr "Clé de licence invalide ou expirée."
-
-#: includes/class-licence-key-shortcode.php:80
-msgid "Course product not found."
-msgstr "Produit du cours non trouvé."
-
-#: includes/class-licence-key-shortcode.php:95
-msgid "Licence key enrollment"
-msgstr "Inscription par clé de licence"
-
-#: includes/class-licence-key-shortcode.php:110
-msgid "Course activated successfully!"
-msgstr "Cours activé avec succès !"
-
-#: includes/class-licence-key-table.php:12
+#: includes/class-admin.php:132 includes/class-licence-key-table.php:12
 msgid "Licence Key"
 msgstr "Clé de licence"
 
-#: includes/class-licence-key-table.php:13
+#: includes/class-admin.php:133 includes/class-licence-key-table.php:13
 msgid "Status"
 msgstr "Statut"
 
-#: includes/class-licence-key-table.php:14
+#: includes/class-admin.php:134 includes/class-licence-key-table.php:14
 msgid "Created"
 msgstr "Créé le"
+
+#: includes/class-licence-key-shortcode.php:16
+msgid "Please login to use a licence key."
+msgstr "Veuillez vous connecter pour utiliser une clé de licence."
+
+#: includes/class-licence-key-shortcode.php:29
+msgid "XXXX-XXXX-XXXX-XXXX"
+msgstr "XXXX-XXXX-XXXX-XXXX"
+
+#: includes/class-licence-key-shortcode.php:33
+msgid "Activate Licence"
+msgstr "Activer la licence"
+
+#: includes/class-licence-key-shortcode.php:76
+msgid "Invalid or expired licence key."
+msgstr "Clé de licence invalide ou expirée."
+
+#: includes/class-licence-key-shortcode.php:84
+msgid "Course product not found."
+msgstr "Produit du cours non trouvé."
+
+#: includes/class-licence-key-shortcode.php:99
+msgid "Licence key enrollment"
+msgstr "Inscription par clé de licence"
+
+#: includes/class-licence-key-shortcode.php:114
+msgid "Course activated successfully!"
+msgstr "Cours activé avec succès !"
 
 #: includes/class-licence-key-table.php:46
 msgid "Deleted course"
 msgstr "Cours supprimé"
 
-#: includes/class-licence-key-table.php:70
+#: includes/class-licence-key-table.php:69
 msgid "All Courses"
 msgstr "Tous les cours"
 
-#: includes/class-licence-key-table.php:89
+#: includes/class-licence-key-table.php:88
 msgid "All Statuses"
 msgstr "Tous les statuts"
 
-#: includes/class-licence-key-table.php:91
+#: includes/class-licence-key-table.php:102
+msgid "Export: All Keys"
+msgstr "Exportation : toutes les clés"
+
+#: includes/class-licence-key-table.php:105
 msgid "Active"
 msgstr "Actif"
 
-#: includes/class-licence-key-table.php:94
-msgid "Sent to User"
-msgstr "Envoyé à l'utilisateur"
+#: includes/class-licence-key-table.php:108
+msgid "Sent"
+msgstr "Envoyé"
 
-#: includes/class-licence-key-table.php:97
+#: includes/class-licence-key-table.php:111
 msgid "Expired"
 msgstr "Expiré"
 
-#: includes/class-licence-key-table.php:125
+#: includes/class-licence-key-table.php:119
+msgid "Export CSV"
+msgstr "Exporter en CSV"
+
+#: includes/class-licence-key-table.php:151
 msgid "Mark as Active"
 msgstr "Marquer comme actif"
 
-#: includes/class-licence-key-table.php:126
+#: includes/class-licence-key-table.php:152
 msgid "Mark as Sent"
 msgstr "Marquer comme envoyé"
 
-#: includes/class-licence-key-table.php:127
+#: includes/class-licence-key-table.php:153
 msgid "Mark as Expired"
 msgstr "Marquer comme expiré"
 
-#: includes/class-licence-key-table.php:128
+#: includes/class-licence-key-table.php:154
 msgid "Delete"
 msgstr "Supprimer"
+
+#~ msgid "Sent to User"
+#~ msgstr "Envoyé à l'utilisateur"

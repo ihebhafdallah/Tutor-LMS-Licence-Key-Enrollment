@@ -55,17 +55,16 @@ class Tutor_Licence_Key_Table extends WP_List_Table
 
     protected function extra_tablenav($which)
     {
-
         if ($which !== 'top') {
             return;
         }
 
         $selected_course = $_GET['filter_course'] ?? '';
         $selected_status = $_GET['filter_status'] ?? '';
-
 ?>
         <div class="alignleft actions">
 
+            <!-- Existing filters -->
             <select name="filter_course">
                 <option value=""><?php esc_html_e('All Courses', 'tutor-lms-licence-key-enrollment'); ?></option>
                 <?php
@@ -87,22 +86,49 @@ class Tutor_Licence_Key_Table extends WP_List_Table
 
             <select name="filter_status">
                 <option value=""><?php esc_html_e('All Statuses', 'tutor-lms-licence-key-enrollment'); ?></option>
-                <option value="active" <?php selected($selected_status, 'active'); ?>>
-                    <?php esc_html_e('Active', 'tutor-lms-licence-key-enrollment'); ?>
-                </option>
-                <option value="sent" <?php selected($selected_status, 'sent'); ?>>
-                    <?php esc_html_e('Sent to User', 'tutor-lms-licence-key-enrollment'); ?>
-                </option>
-                <option value="expired" <?php selected($selected_status, 'expired'); ?>>
-                    <?php esc_html_e('Expired', 'tutor-lms-licence-key-enrollment'); ?>
-                </option>
+                <option value="active" <?php selected($selected_status, 'active'); ?>>Active</option>
+                <option value="sent" <?php selected($selected_status, 'sent'); ?>>Sent</option>
+                <option value="expired" <?php selected($selected_status, 'expired'); ?>>Expired</option>
             </select>
 
             <?php submit_button(__('Filter'), '', 'filter_action', false); ?>
 
         </div>
+
+        <!-- EXPORT FORM -->
+        <div class="alignleft actions">
+            <select name="export_status">
+                <option value="">
+                    <?php esc_html_e('Export: All Keys', 'tutor-lms-licence-key-enrollment'); ?>
+                </option>
+                <option value="active">
+                    <?php esc_html_e('Active', 'tutor-lms-licence-key-enrollment'); ?>
+                </option>
+                <option value="sent">
+                    <?php esc_html_e('Sent', 'tutor-lms-licence-key-enrollment'); ?>
+                </option>
+                <option value="expired">
+                    <?php esc_html_e('Expired', 'tutor-lms-licence-key-enrollment'); ?>
+                </option>
+            </select>
+
+            <input type="hidden" name="export_csv" value="1">
+
+            <?php
+            submit_button(
+                __('Export CSV', 'tutor-lms-licence-key-enrollment'),
+                'secondary',
+                '',
+                false
+            );
+            ?>
+        </div>
+
+
+
 <?php
     }
+
 
     protected function get_sortable_columns()
     {
@@ -159,7 +185,6 @@ class Tutor_Licence_Key_Table extends WP_List_Table
                 break;
         }
     }
-
 
     public function column_status($item)
     {
