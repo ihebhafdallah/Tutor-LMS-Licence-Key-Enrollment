@@ -133,7 +133,7 @@ class Tutor_Licence_Key_Table extends WP_List_Table
     protected function get_sortable_columns()
     {
         return [
-            'created_at' => ['created_at', true],
+            'id' => ['id', true],
         ];
     }
 

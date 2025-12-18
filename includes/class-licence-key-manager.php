@@ -42,8 +42,8 @@ class Tutor_Licence_Key_Manager
             $args[] = sanitize_text_field($_GET['filter_status']);
         }
 
-        $allowed_orderby = ['created_at', 'id'];
-        $order_by = 'created_at';
+        $allowed_orderby = ['id', 'created_at'];
+        $order_by = 'id';
         $order    = 'DESC';
 
         if (! empty($_GET['orderby']) && in_array($_GET['orderby'], $allowed_orderby, true)) {
