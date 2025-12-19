@@ -7,7 +7,6 @@ class Tutor_Licence_Key_Admin
     {
         add_action('admin_menu', [$this, 'register_menu']);
         add_action('admin_post_generate_licence_keys', [$this, 'handle_form']);
-        add_action('admin_init', [$this, 'handle_export']);
     }
 
     public function register_menu()
@@ -96,55 +95,6 @@ class Tutor_Licence_Key_Admin
         Tutor_Licence_Key_Manager::generate_keys($course_id, $quantity);
 
         wp_redirect(admin_url('admin.php?page=tutor-licence-keys&generated=1'));
-        exit;
-    }
-
-    public function handle_export()
-    {
-        if (empty($_GET['export_csv'])) {
-            return;
-        }
-
-        if (! current_user_can('manage_options')) {
-            wp_die(
-                __('Permission denied', 'tutor-lms-licence-key-enrollment')
-            );
-        }
-
-        $status = sanitize_text_field($_GET['export_status'] ?? '');
-
-        $keys = Tutor_Licence_Key_Manager::get_keys_for_export($status);
-
-        $filename = sprintf(
-            /* translators: %s: date */
-            __('licence-keys-%s.csv', 'tutor-lms-licence-key-enrollment'),
-            date_i18n('Y-m-d')
-        );
-
-        header('Content-Type: text/csv; charset=utf-8');
-        header('Content-Disposition: attachment; filename=' . $filename);
-
-        $output = fopen('php://output', 'w');
-
-        fputcsv($output, [
-            __('ID', 'tutor-lms-licence-key-enrollment'),
-            __('Course', 'tutor-lms-licence-key-enrollment'),
-            __('Licence Key', 'tutor-lms-licence-key-enrollment'),
-            __('Status', 'tutor-lms-licence-key-enrollment'),
-            __('Created', 'tutor-lms-licence-key-enrollment'),
-        ]);
-
-        foreach ($keys as $key) {
-            fputcsv($output, [
-                $key['id'],
-                get_the_title($key['course_id']),
-                $key['licence_key'],
-                $key['status'],
-                $key['created_at'],
-            ]);
-        }
-
-        fclose($output);
         exit;
     }
 }
