@@ -2,6 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://tutorlms.com/wp-content/uploads/2024/04/brand-assets-tutor-logo-light.webp">
     <source media="(prefers-color-scheme: light)" srcset="https://tutorlms.com/wp-content/uploads/2024/04/brand-assets-tutor-logo-dark.webp">
+    <img src="https://tutorlms.com/wp-content/uploads/2024/04/brand-assets-tutor-logo-light.webp" width="256" alt="Tutor LMS Logo">
   </picture>
 </p>
 
